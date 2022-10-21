@@ -1,11 +1,9 @@
-function filterTest(char) {
-    return /^[a-zA-Z0-9]+$/.test(char);
-}
-
 function filterString(str) {
     return str.split('')
-        .filter(filterTest)
-        .map(el => el.toLowerCase());
+        // Removing all non alphanomeric characters
+        .filter(char => /^[a-zA-Z0-9]+$/.test(char))
+        // and swtiching all letters to lower case.
+        .map(char => char.toLowerCase());
 }
 
 function palindrome(str) {
