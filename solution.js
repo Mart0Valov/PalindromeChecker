@@ -10,15 +10,13 @@ function filterString(str) {
 
 function palindrome(str) {
     const filteredStr = filterString(str);
-    const original = filteredStr.join('');
-    const reversedStr = filteredStr.reverse();
-    console.log(original);
-    console.log(reversedStr.join(''));
-    if (original === reversedStr.join('')) {
+    const reversedStr = [...filteredStr].reverse();
+    if (filteredStr.join('') === reversedStr.join('')) {
         return true;
     }
     return false;
 }
 
-const res = palindrome("1 eye for of 1 eye.");
-console.log(res);
+const test1 = palindrome("eye"); // should return true
+console.log(test1);
+const test2 = palindrome("_eye"); // should return true
