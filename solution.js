@@ -1,6 +1,6 @@
 function filterString(str) {
     return str.split('')
-        // Removing all non alphanomeric characters
+        // Filtering all non alphanomeric characters
         .filter(char => /^[a-zA-Z0-9]+$/.test(char))
         // and swtiching all letters to lower case.
         .map(char => char.toLowerCase());
